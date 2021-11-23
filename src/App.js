@@ -1,7 +1,6 @@
 import React from "react";
 import HeaderComponent from "./component/Navbar/index.js"
 import {Routes, Route} from "react-router-dom"
-// import {Switch} from 'react-router'
 import Landing from "./component/Pages/Landing_Page/index.js"
 import {NoFound} from "./component/Pages/NoFound.js"
 import Post from "./component/Pages/Post.js"
