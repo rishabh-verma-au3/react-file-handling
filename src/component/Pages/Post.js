@@ -24,7 +24,7 @@ const Post = (props) => {
                 {
                     props.posts.data && props.posts.data.length ? 
                     props.posts.data.map((elemnt,key)=>{
-                       return <div key={key} style={{"padding":"2em 2em"}}>
+                       return <div key={key} title="posts" style={{"padding":"2em 2em"}}>
                            {elemnt.id}. &nbsp;{elemnt.body}
                            </div>
                     })

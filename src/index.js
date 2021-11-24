@@ -12,17 +12,17 @@ const App = lazy(()=>import("./App"))
 
 
 ReactDOM.render(
- 
+  <Router>
   <React.StrictMode>
     <Provider store={store}>
     <Suspense fallback={<div style={{"backdropFilter":"revert","height":"100vh"}}>Hii</div>}>
-    <Router>
+    
     <App />
-    </Router>
+    
     {/* <Spinner/> */}
     </Suspense>
     </Provider>
-  </React.StrictMode>,
+  </React.StrictMode></Router>,
   document.getElementById('root')
 );
 
