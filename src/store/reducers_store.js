@@ -20,12 +20,18 @@ export  function createAsyncReducer(initialState, init, success, failure, reset=
     }
 }
 
-const reducer = (initialState) => {
-     const map1 = {
-        POST_REDUCER:posts_reducer,
-        COMMENT_REDUCER: comments_reducer,
-        PHOTO_REDUCER: photos_reducer
-     }
+var objectMap = Object.freeze({
+    POST_REDUCER:posts_reducer,
+    COMMENT_REDUCER: comments_reducer,
+    PHOTO_REDUCER: photos_reducer
+})
+const reducer = (initialState, map) => {
+    //  const map1 = {
+    //     POST_REDUCER:posts_reducer,
+    //     COMMENT_REDUCER: comments_reducer,
+    //     PHOTO_REDUCER: photos_reducer
+    //  }
+    const map1 = {...map}
      return (state = initialState, action) => {
         //  console.log(map1[action.type.toString()]);
          const mappedReducer = map1[action.type.toString()];
@@ -47,4 +53,4 @@ const reducer = (initialState) => {
 
 }
 
-export const appReducer = reducer(initialState);
+export const appReducer = reducer(initialState, objectMap);
