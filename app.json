@@ -1,0 +1,11 @@
+{
+    "environments": {
+      "test": {
+        "scripts": {
+          "test-setup": "react-scripts test",
+          "test": "npm run test ."
+        }
+      }
+      
+    }
+  }
